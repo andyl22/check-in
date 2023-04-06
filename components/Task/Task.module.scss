@@ -2,8 +2,58 @@
   display: flex;
   gap: 0.5rem;
   background: white;
+  border: 1px solid rgb(210, 219, 231);
   color: black;
-  padding: 2rem;
   border-radius: 0.2rem;
   width: 300px;
+  .customCheckbox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    &:hover {
+      cursor: pointer;
+      background: #deebff;
+    }
+    label {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+      pointer-events: none;
+    }
+    input[type="checkbox"] {
+      margin-left: 10px;
+      appearance: none;
+      font: inherit;
+      width: 1.3em;
+      height: 1.15em;
+      border: 0.15em solid #b2b8c0;
+      border-radius: 0.2em;
+      transform: translateY(-0.075em);
+      display: grid;
+      place-content: center;
+      &::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+        box-shadow: inset 1em 1em var(--form-control-color);
+        transform: scale(0);
+        transition: 0.1s ease;
+        transform-origin: bottom left;
+        background: white;
+      }
+      &:checked::before {
+        transform: scale(1);
+      }
+      &:checked {
+        background: #1788d3;
+        border-color: #1788d3;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 }

@@ -4,12 +4,14 @@ import Task from "@/components/Task/Task";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.navBar}>counter</div>
+      <div className={styles.navBar}></div>
       <div className={styles.taskContainer}>
-        <Task />
-        <Task />
-        <Task />
-        <Task />
+        <div className={styles.subContainer}>
+          <Task label="testOne" />
+          <Task label="testTwo" />
+          <Task label="testThree" />
+          <Task label="testFour" />
+        </div>
       </div>
     </main>
   );
