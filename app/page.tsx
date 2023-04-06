@@ -1,17 +1,17 @@
 import styles from "./page.module.scss";
-import Task from "@/components/Task/Task";
+import TaskController from "@/components/Task/TaskController";
 
 export default function Home() {
+  const taskList = [
+    { name: "taskOne", finished: false },
+    { name: "taskTwo", finished: false },
+  ];
+
   return (
     <main className={styles.main}>
       <div className={styles.navBar}></div>
       <div className={styles.taskContainer}>
-        <div className={styles.subContainer}>
-          <Task label="testOne" />
-          <Task label="testTwo" />
-          <Task label="testThree" />
-          <Task label="testFour" />
-        </div>
+        <TaskController taskList={taskList} />
       </div>
     </main>
   );

@@ -1,3 +1,5 @@
+$check-color: #00bb28;
+
 .task {
   display: flex;
   gap: 0.5rem;
@@ -48,8 +50,8 @@
         transform: scale(1);
       }
       &:checked {
-        background: #1788d3;
-        border-color: #1788d3;
+        background: $check-color;
+        border-color: $check-color;
       }
       &:hover {
         cursor: pointer;
